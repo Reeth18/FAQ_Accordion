@@ -1,0 +1,191 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-content {
+    padding: 100px;
+}
+
+.container {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+h2 {
+    padding-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.faq-accordion {
+    background: rgb(181, 200, 198);
+    /* Background color */
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* Ensures transition looks neat */
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+}
+
+.accordion-item {
+    position: relative;
+    padding: 0px 40px;
+    cursor: pointer;
+}
+
+.faq-qs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin: 0;
+    color: #000000;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(107, 113, 119, 1);
+}
+
+.icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-img-2 {
+    display: none;
+}
+
+/* Minus icon when active */
+.accordion-item.active .faq-img-1 {
+    display: none;
+}
+
+.accordion-item.active .faq-img-2 {
+    display: block;
+}
+
+.accordion-item.active .answer {
+    max-height: 500px;
+    overflow: visible;
+}
+
+/* Show <hr /> only when item is active */
+.accordion-item hr {
+    display: none;
+}
+
+.accordion-item.active hr {
+    display: block;
+    border: 1px solid rgba(115, 121, 125, 0.4);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.faq-img-2 {
+    display: none;
+    /* Hide minus icon initially */
+}
+
+/* Minus icon when active */
+.accordion-item.active .faq-img-1 {
+    display: none;
+    /* Hide plus icon */
+}
+
+.accordion-item.active .faq-img-2 {
+    display: block;
+    /* Show minus icon */
+}
+
+.accordion-item.active .answer {
+    max-height: 500px;
+    /* Expand answer */
+    overflow: visible;
+}
+
+img {
+    padding-top: 20px;
+    padding-right: 2px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1080px) {
+    .question {
+        margin-right: 15px;
+    }
+
+    img {
+        padding-top: 20px;
+        padding-right: 2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .faq-content {
+        /* width: 100%; */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .question {
+        font-size: 22px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        padding-bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        margin-bottom: 55px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .accordion-item {
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .question {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+}
